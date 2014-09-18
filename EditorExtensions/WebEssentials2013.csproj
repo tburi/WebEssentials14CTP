@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
   <PropertyGroup>
-    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
     <SccProjectName>
@@ -60,7 +60,7 @@
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>
     </AssemblyOriginatorKeyFile>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.3</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -98,7 +98,18 @@
     <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
+    <Reference Include="Microsoft.VisualStudio.ComponentModelHost, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.CoreUtility, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Editor, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualStudio.ExtensionManager, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.Language.Intellisense, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Language.NavigateTo.Interfaces, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Shell.14.0, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Text.Data, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Text.Logic, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Text.UI, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Text.UI.Wpf, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Threading, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Minimatch, Version=1.1.0.0, Culture=neutral, PublicKeyToken=0cadeb0b849c27c0">
       <HintPath>..\packages\Minimatch.1.1.0.0\lib\portable-net40+sl50+win+wp80\Minimatch.dll</HintPath>
     </Reference>
@@ -118,71 +129,61 @@
     <Reference Include="Microsoft.Collections.Immutable, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.JSON.Core">
-      <HintPath>$(DevEnvDir)\Extensions\Microsoft\Web Tools\Languages\Microsoft.JSON.Core.dll</HintPath>
+      <HintPath>$(DevEnvDir)\Extensions\Microsoft\Web Tools\Editors\Microsoft.JSON.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.JSON.Editor">
-      <HintPath>$(DevEnvDir)\Extensions\Microsoft\Web Tools\Languages\Microsoft.JSON.Editor.dll</HintPath>
+      <HintPath>$(DevEnvDir)\Extensions\Microsoft\Web Tools\Editors\Microsoft.JSON.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.Practices.TransientFaultHandling.Core">
       <HintPath>..\packages\TransientFaultHandling.Core.5.1.1209.1\lib\NET4\Microsoft.Practices.TransientFaultHandling.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.JSLS, Version=12.0.0.0" />
+    <Reference Include="Microsoft.VisualStudio.JSLS, Version=14.0.0.0" />
     <Reference Include="Microsoft.VisualStudio.JSON.Package">
-      <HintPath>$(DevEnvDir)\Extensions\Microsoft\Web Tools\Languages\Microsoft.VisualStudio.JSON.Package.dll</HintPath>
+      <HintPath>$(DevEnvDir)\Extensions\Microsoft\Web Tools\Editors\Microsoft.VisualStudio.JSON.Package.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Language.StandardClassification" />
-    <Reference Include="Microsoft.CSS.Core, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.CSS.Core">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(DevEnvDir)\CommonExtensions\Microsoft\Web\Editor\Microsoft.CSS.Core.dll</HintPath>
+      <HintPath>$(DevEnvDir)\Extensions\Microsoft\Web Tools\Editors\Microsoft.CSS.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.CSS.Editor, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.CSS.Editor">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(DevEnvDir)\CommonExtensions\Microsoft\Web\Editor\Microsoft.CSS.Editor.dll</HintPath>
+      <HintPath>$(DevEnvDir)\Extensions\Microsoft\Web Tools\Editors\Microsoft.CSS.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Html.Core, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.Html.Core">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(DevEnvDir)\CommonExtensions\Microsoft\Web\Editor\Microsoft.Html.Core.dll</HintPath>
+      <HintPath>$(DevEnvDir)\Extensions\Microsoft\Web Tools\Editors\Microsoft.Html.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Html.Editor, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.Html.Editor">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(DevEnvDir)\CommonExtensions\Microsoft\Web\Editor\Microsoft.Html.Editor.dll</HintPath>
+      <HintPath>$(DevEnvDir)\Extensions\Microsoft\Web Tools\Editors\Microsoft.Html.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Text.Internal, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.VisualStudio.Text.Internal, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(DevEnvDir)\PrivateAssemblies\Microsoft.VisualStudio.Text.Internal.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TextManager.Interop.12.0" />
-    <Reference Include="Microsoft.VisualStudio.Html.Package" />
-    <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="Microsoft.VisualStudio.ComponentModelHost, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.VisualStudio.CoreUtility, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.VisualStudio.Language.Intellisense, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <Private>False</Private>
+    <Reference Include="Microsoft.VisualStudio.Html.Package">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(DevEnvDir)\Extensions\Microsoft\Web Tools\Editors\Microsoft.VisualStudio.Html.Package.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Language.NavigateTo.Interfaces, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.VisualStudio.Shell.12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualStudio.Shell.Interop.11.0, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Text.Data, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.VisualStudio.Text.Logic, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.VisualStudio.Text.UI, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.VisualStudio.Text.UI.Wpf, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualStudio.TextManager.Interop.8.0, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-    <Reference Include="Microsoft.VisualStudio.Threading, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualStudio.Web.BrowserLink.12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualStudio.Web.Extensions">
-      <HintPath>$(DevEnvDir)\Extensions\Microsoft\Web Tools\Languages\Microsoft.VisualStudio.Web.Extensions.dll</HintPath>
+      <HintPath>$(DevEnvDir)\Extensions\Microsoft\Web Tools\Editors\Microsoft.VisualStudio.Web.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Microsoft.Web.Core, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.Web.Core">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(DevEnvDir)\CommonExtensions\Microsoft\Web\Editor\Microsoft.Web.Core.dll</HintPath>
+      <HintPath>$(DevEnvDir)\Extensions\Microsoft\Web Tools\Editors\Microsoft.Web.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Editor, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualStudio.OLE.Interop" />
     <Reference Include="Microsoft.VisualStudio.Shell.Interop" />
     <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0" />
@@ -191,9 +192,9 @@
     <Reference Include="Microsoft.VisualStudio.TextManager.Interop" />
     <Reference Include="Microsoft.VisualStudio.Shell.Immutable.10.0" />
     <Reference Include="Microsoft.VisualStudio.Shell.Immutable.11.0" />
-    <Reference Include="Microsoft.Web.Editor, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.Web.Editor">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(DevEnvDir)\CommonExtensions\Microsoft\Web\Editor\Microsoft.Web.Editor.dll</HintPath>
+      <HintPath>$(DevEnvDir)\Extensions\Microsoft\Web Tools\Editors\Microsoft.Web.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -1027,6 +1028,8 @@
     <Page Include="CSS\BrowserSelector\BrowserSelector.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
